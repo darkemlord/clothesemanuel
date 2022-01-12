@@ -1,27 +1,41 @@
-import {Page,Layout,Card, Tag} from "@shopify/polaris";
+import {Page,Layout,Card, Tag,Stack, TextField, Button} from "@shopify/polaris";
+import { ST } from "next/dist/next-server/lib/utils";
 const Index = () => {
   return <Page title="Product Tags">
     <Layout>
       <Layout.Section oneHalf>
         <Card title="Product Name">
           <Card.Section>
-            <Tag  onRemove={()=>console.log("Heloo")}>Test</Tag>
-            <Tag  onRemove={()=>console.log("Good")}>Good</Tag>
+            <Stack>
+              <Tag  onRemove={()=>console.log("Heloo")}>Test</Tag>
+              <Tag  onRemove={()=>console.log("Good")}>Good</Tag>
+            </Stack>
           </Card.Section>
 
           <Card.Section>
-            <p>
-              View a summary of your online store’s performance, including sales,
-              visitors, top products, and referrals.
-            </p>
+            <Stack distribution="equalSpacing">
+              <TextField/>
+              <Button primary>Add Tag</Button>
+            </Stack>
           </Card.Section>
         </Card>
       </Layout.Section>
       <Layout.Section oneHalf>
-       <Card title="Product Name" sectioned>
-         <p>Simple Texts</p>
+       <Card title="Product Name" >
+          <Card.Section>
+            <Stack>
+              <Tag  onRemove={()=>console.log("Heloo")}>Test</Tag>
+              <Tag  onRemove={()=>console.log("Good")}>Good</Tag>
+            </Stack>
+          </Card.Section>
 
-       </Card>
+          <Card.Section>
+            <Stack distribution="equalSpacing">
+              <TextField/>
+              <Button primary>Add Tag</Button>
+            </Stack>
+          </Card.Section>
+        </Card>
       </Layout.Section>
     </Layout>
   </Page>
