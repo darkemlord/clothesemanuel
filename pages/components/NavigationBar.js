@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Navigation } from '@shopify/polaris'
 
 const NavigationBar = () => {
   return (
@@ -6,14 +7,12 @@ const NavigationBar = () => {
     <Navigation.Section
       items={[
         {
-          url: '/path/to/place',
+          url: '/',
           label: 'Home',
-          icon: HomeMajor,
         },
         {
-          url: '/path/to/place',
+          url: '/',
           label: 'Products',
-          icon: ProductsMajor,
         },
       ]}
     />
