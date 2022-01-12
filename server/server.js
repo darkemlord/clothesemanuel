@@ -77,7 +77,7 @@ app.prepare().then(async () => {
 
   //Products Route
 
-  router.get("/dashboard", async (ctx) => {
+  router.get("/products", async (ctx) => {
     const shop = ctx.query.shop;
 
     // This shop hasn't been seen yet, go through OAuth to create a session
