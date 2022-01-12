@@ -1,15 +1,14 @@
 import React from 'react';
-import {Page,Layout} from "@shopify/polaris";
-import ProductCard from "./components/ProductCard";
+import {Page, EmptyState} from '@shopify/polaris';
 
 export const Dashboard = () => {
   return (
-  <Page title="Product Tags">
-    <Layout>
-      <ProductCard />
-      <ProductCard />
-    </Layout>
-  </Page>
+      <Page>
+      <EmptyState>
+        <h1>Hello dear!</h1>
+      </EmptyState>
+    </Page>
+
   )
 }
 
