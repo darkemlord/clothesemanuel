@@ -3,6 +3,7 @@ import { Layout,Card, Tag,Stack, TextField, Button } from '@shopify/polaris';
 
 const ProductCard = (props) => {
   const [value, setValue] = useState('');
+  const [newPrice, setNewPrice] = useState('');
   const handleChange = useCallback((newValue) => setValue(newValue), []);
 
   return (
@@ -14,7 +15,7 @@ const ProductCard = (props) => {
             <div>
               <Stack vertical={true}>
                 <p>Description: {props.description}</p>
-                <p>Price: {props.price}¥</p>
+                <p>Price: {newPrice ? newPrice : props.price}¥</p>
                 <Stack>
                   <TextField
                       value={value}
