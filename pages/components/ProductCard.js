@@ -1,7 +1,10 @@
-import React from 'react';
+import  React, { useState, useCallback } from 'react';
 import { Layout,Card, Tag,Stack, TextField, Button } from '@shopify/polaris';
 
 const ProductCard = (props) => {
+  const [value, setValue] = useState('');
+  const handleChange = useCallback((newValue) => setValue(newValue), []);
+
   return (
     <Layout.Section oneHalf>
       <Card title={props.name}>
@@ -9,10 +12,18 @@ const ProductCard = (props) => {
           <Stack>
             <img className="product-img" src={props.image} />
             <div>
-            <Stack vertical={true}>
-              <p>Description: {props.description}</p>
-              <p>Price: {props.price}¥</p>
-            </Stack>
+              <Stack vertical={true}>
+                <p>Description: {props.description}</p>
+                <p>Price: {props.price}¥</p>
+                <Stack>
+                  <TextField
+                      value={value}
+                      onChange={handleChange}
+                      autoComplete="off"
+                  />
+                  <Button primary>update price</Button>
+                </Stack>
+              </Stack>
             </div>
           </Stack>
         </Card.Section>
@@ -26,7 +37,7 @@ const ProductCard = (props) => {
 
 
         <Card.Section>
-          <Stack distribution="equalSpacing">
+          <Stack>
             <TextField/>
             <Button primary>Add Tag</Button>
           </Stack>

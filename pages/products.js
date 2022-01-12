@@ -7,8 +7,8 @@ const Products = () => {
   return (
     <Page title="Product Tags">
       <Layout>
-        {localProducts.map(product =>(
-          <ProductCard name={product.name} image={product.img} price={product.price} description={product.description}/>
+        {localProducts.map((product, index )=>(
+          <ProductCard key={index} name={product.name} image={product.img} price={product.price} description={product.description}/>
         ))}
       </Layout>
     </Page>
