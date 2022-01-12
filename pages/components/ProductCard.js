@@ -5,6 +5,7 @@ const ProductCard = (props) => {
   const [value, setValue] = useState('');
   const [newPrice, setNewPrice] = useState('');
   const handleChange = useCallback((newValue) => setValue(newValue), []);
+  const handleButton = () => setNewPrice(value)
 
   return (
     <Layout.Section oneHalf>
@@ -22,7 +23,7 @@ const ProductCard = (props) => {
                       onChange={handleChange}
                       autoComplete="off"
                   />
-                  <Button primary>update price</Button>
+                  <Button primary onClick={handleButton}>update price</Button>
                 </Stack>
               </Stack>
             </div>
