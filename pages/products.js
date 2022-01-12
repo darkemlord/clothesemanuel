@@ -11,7 +11,7 @@ const products = [
   {
     name: 'Black T-Shirt',
     price: '300',
-    img: 'https://cache.mrporter.com/variants/images/31432202865751898/in/w1200_q60.jpg'
+    img: 'https://cache.mrporter.com/variants/images/13452677152170858/in/w1200_q60.jpg'
   },
 ]
 const Products = () => {
@@ -19,7 +19,7 @@ const Products = () => {
     <Page title="Product Tags">
       <Layout>
         {products.map(product =>(
-          <ProductCard name={product.name} />
+          <ProductCard name={product.name} image={product.img} price={product.price} />
         ))}
       </Layout>
     </Page>

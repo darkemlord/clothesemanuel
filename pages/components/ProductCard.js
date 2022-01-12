@@ -7,10 +7,10 @@ const ProductCard = (props) => {
       <Card title={props.name}>
         <Card.Section>
           <Stack>
-            <img className="product-img" src="https://cache.mrporter.com/variants/images/31432202865751898/in/w1200_q60.jpg" alt="not founded" />
+            <img className="product-img" src={props.image} />
             <div>
             <p>Description:</p>
-            <p>Price:{}¥</p>
+            <p>Price:{props.price}¥</p>
             </div>
 
           </Stack>
