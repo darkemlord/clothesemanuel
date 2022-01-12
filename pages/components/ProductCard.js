@@ -29,21 +29,6 @@ const ProductCard = (props) => {
             </div>
           </Stack>
         </Card.Section>
-
-        <Card.Section>
-          <Stack>
-            <Tag  onRemove={()=>console.log("Heloo")}>Test</Tag>
-            <Tag  onRemove={()=>console.log("Good")}>Good</Tag>
-          </Stack>
-        </Card.Section>
-
-
-        <Card.Section>
-          <Stack>
-            <TextField/>
-            <Button primary>Add Tag</Button>
-          </Stack>
-        </Card.Section>
       </Card>
     </Layout.Section>
   )
