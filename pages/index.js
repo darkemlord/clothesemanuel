@@ -1,5 +1,4 @@
-import {Page,Layout} from "@shopify/polaris";
-import ProductCard from "./components/ProductCard";
+import {Page} from "@shopify/polaris";
 
 const Index = () => {
   return (

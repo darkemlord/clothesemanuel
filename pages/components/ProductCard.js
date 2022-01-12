@@ -13,6 +13,10 @@ const ProductCard = () => {
         </Card.Section>
 
         <Card.Section>
+          <img class="product-img"src="https://cache.mrporter.com/variants/images/31432202865751898/in/w1200_q60.jpg" alt="not founded" />
+        </Card.Section>
+
+        <Card.Section>
           <Stack distribution="equalSpacing">
             <TextField/>
             <Button primary>Add Tag</Button>
