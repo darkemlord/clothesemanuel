@@ -9,10 +9,11 @@ const ProductCard = (props) => {
           <Stack>
             <img className="product-img" src={props.image} />
             <div>
-            <p>Description:</p>
-            <p>Price: {props.price}¥</p>
+            <Stack vertical={true}>
+              <p>Description: {props.description}</p>
+              <p>Price: {props.price}¥</p>
+            </Stack>
             </div>
-
           </Stack>
         </Card.Section>
 

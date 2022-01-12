@@ -8,7 +8,7 @@ const Products = () => {
     <Page title="Product Tags">
       <Layout>
         {localProducts.map(product =>(
-          <ProductCard name={product.name} image={product.img} price={product.price} />
+          <ProductCard name={product.name} image={product.img} price={product.price} description={product.description}/>
         ))}
       </Layout>
     </Page>
