@@ -10,7 +10,7 @@ const ProductCard = (props) => {
             <img className="product-img" src={props.image} />
             <div>
             <p>Description:</p>
-            <p>Price:{props.price}¥</p>
+            <p>Price: {props.price}¥</p>
             </div>
 
           </Stack>
