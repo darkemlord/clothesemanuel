@@ -20,6 +20,7 @@ const ProductCard = (props) => {
                 <Stack>
                   <TextField
                       value={value}
+                      type="number"
                       onChange={handleChange}
                       autoComplete="off"
                   />
