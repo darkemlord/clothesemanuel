@@ -1,7 +1,8 @@
 import  React, { useState, useCallback } from 'react';
-import { Layout,Card, Tag,Stack, TextField, Button } from '@shopify/polaris';
+import { Layout,Card, Stack, TextField, Button } from '@shopify/polaris';
 
 const ProductCard = (props) => {
+
   const [value, setValue] = useState('');
   const [newPrice, setNewPrice] = useState('');
   const handleChange = useCallback((newValue) => setValue(newValue), []);

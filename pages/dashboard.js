@@ -5,7 +5,7 @@ export const Dashboard = () => {
   return (
       <Page>
       <EmptyState>
-        <h1>Hello dear!</h1>
+        <h1>Hello there!</h1>
       </EmptyState>
     </Page>
 

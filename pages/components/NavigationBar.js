@@ -1,22 +1,36 @@
-import React from 'react';
-import { Navigation } from '@shopify/polaris'
+import React, {useState, useCallback} from 'react';
+import { TopBar} from '@shopify/polaris'
 
 const NavigationBar = () => {
-  return (
-  <Navigation location="/">
-    <Navigation.Section
-      items={[
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+
+  const toggleIsUserMenuOpen = useCallback(
+    () => setIsUserMenuOpen((isUserMenuOpen) => !isUserMenuOpen),
+    [],
+  );
+
+  const userMenuMarkup = (
+    <TopBar.UserMenu
+      actions={[
         {
-          url: '/',
-          label: 'Home',
+          items: [{content: 'Back to Shopify'}],
         },
         {
-          url: '/',
-          label: 'Products',
+          items: [{content: 'Community forums'}],
         },
       ]}
+      name="Emanuel"
+      detail="Admin"
+      initials="E"
+      open={isUserMenuOpen}
+      onToggle={toggleIsUserMenuOpen}
     />
-  </Navigation>
+  );
+  return (
+    <TopBar
+      showNavigationToggle
+      userMenu={userMenuMarkup}
+    />
   )
 }
 

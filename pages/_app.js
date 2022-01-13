@@ -7,7 +7,8 @@ import { authenticatedFetch } from "@shopify/app-bridge-utils";
 import { Redirect } from "@shopify/app-bridge/actions";
 import "@shopify/polaris/dist/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
-import '../assets/index.scss'
+import '../assets/index.scss';
+import NavigationBar from "./components/NavigationBar";
 
 function userLoggedInFetch(app) {
   const fetchFunction = authenticatedFetch(app);
@@ -45,6 +46,7 @@ function MyProvider(props) {
 
   return (
     <ApolloProvider client={client}>
+      <NavigationBar/>
       <Component {...props} />
     </ApolloProvider>
   );
